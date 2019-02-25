@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Try Snap.svg</title>
+	<script type="text/javascript" src="snap.svg-min.js"></script>
+</head>
+<body>
+	<svg width="500" height="500" id="kanvas"></svg>
+	<script type="text/javascript">
+		var media = Snap('#kanvas')
+		var lingkaran = media.circle(150, 150, 100)
+		lingkaran.attr({
+			fill:'#ff4081',
+		});
+	</script>
+</body>
+</html>
