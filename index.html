@@ -5,13 +5,20 @@
 	<script type="text/javascript" src="snap.svg-min.js"></script>
 </head>
 <body>
-	<svg width="500" height="500" id="kanvas"></svg>
+	<svg width="1000" height="1000" id="kanvas"></svg>
 	<script type="text/javascript">
 		var media = Snap('#kanvas')
 		var lingkaran = media.circle(150, 150, 100)
 		lingkaran.attr({
 			fill:'#ff4081',
 		});
+		var looping = function(r){
+			var newR = r===50 ? 100 : 50
+			lingkaran.animate({r:r}, 1500, function(){
+				looping(newR)
+			})
+		}
+		lingkaran.drag()
 	</script>
 </body>
 </html>
