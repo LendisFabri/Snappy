@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Try Snap.svg</title>
+	<script type="text/javascript" src="../snap.svg-min.js"></script>
+</head>
+<body>
+	<svg width="1000" height="1000" id="kanvas2"></svg>
+	<script type="text/javascript">
+		var media = Snap('#kanvas2')
+		var kotak = media.rect(20, 20, 200, 200)
+		var lingkaran = media.circle(100, 100, 50)
+		kotak.attr({
+			fill:'#0277bd'
+		});
+		lingkaran.attr({
+			fill:'#ff5722'
+		});
+		kotak.click(function(){
+			this.attr('fill', '#01579b')
+		});
+		lingkaran.click(function(){
+			this.attr('fill', '#dd2c00')
+		});
+		media.text(200, 100, 'Klik Objek').attr({
+			'fill': '#263238'
+		});
+	</script>
+</body>
+</html>
