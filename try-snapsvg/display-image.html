@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Try Snap.svg</title>
+	<script type="text/javascript" src="../assets/js/snap.svg-min.js"></script>
+</head>
+<body>
+	<svg width="500" height="500" id="kanvas"></svg>
+	<svg width="500" height="500" id="kanvas2"></svg>
+	<script type="text/javascript">
+		var media = Snap("#kanvas")
+		var tamp = media.g()
+		var gpng = tamp.image("../assets/images/myAvatar.png", 0, 0, 200, 200)
+		var png = gpng.clone()
+		png.transform('t100,200r45')
+
+		var media = Snap("#kanvas2")
+		var tamp = media.g()
+		var gsvg = tamp.image("../assets/images/myAvatar.svg", 0, 0, 200, 200)
+		var svg = gsvg.clone()
+		svg.transform('t200,300r50')
+	</script>
+</body>
+</html>
